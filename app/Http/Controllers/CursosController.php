@@ -79,7 +79,14 @@ class CursosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cursoEdit = $this->cursos->find($id);
+
+        if (is_null($cursoEdit))
+        {
+            return redirect()->route('cursos.index');
+        }
+
+        return view('cursos.edit', compact('cursoEdit'));
     }
 
     /**
@@ -91,7 +98,11 @@ class CursosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->except('_method', '_token');
+        $curso = $this->cursos->find($id);
+        $curso->update($input);
+
+        return redirect()->route('cursos.index');
     }
 
     /**
@@ -102,6 +113,8 @@ class CursosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->cursos->find($id)->delete();
+
+        return redirect()->route('cursos.index');
     }
 }

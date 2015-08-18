@@ -26,6 +26,7 @@
                                 <th>Nome</th>
                                 <th>Coordenador</th>
                                 <th>Fone</th>
+                                <th>Opcoes</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -34,7 +35,15 @@
                                         <td>{{ $curso->nome_curso }}</td>
                                         <td>{{ $curso->coordenador }}</td>
                                         <td>{{ $curso->fone }}</td>
-
+                                        <td align="center">
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal"
+                                                    onclick="editModal({{ $curso->id }})">
+                                                Editar
+                                            </button>
+                                            {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'route' => array('cursos.destroy', $curso->id))) !!}
+                                            {!! Form::submit('Deletar', array('class' => 'btn btn-danger btn-xs')) !!}
+                                            {!! Form::close() !!}
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -47,7 +56,7 @@
                 function editModal(id) {
                     $.ajax({
                         method: 'get',
-                        url: '/admin/cursos/' + id + '/edit'}).then(function(data) {
+                        url: '/cursos/' + id + '/edit'}).then(function(data) {
                         $(data).modal()
                     });
                 }
