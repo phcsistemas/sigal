@@ -18,6 +18,7 @@ class CursosController extends Controller
 
     public function __construct(Curso $curso) {
         $this->cursos = $curso;
+        $this->middleware('auth');
     }
 
     /**
