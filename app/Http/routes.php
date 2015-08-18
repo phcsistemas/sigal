@@ -29,3 +29,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::resource('salas', 'SalasController');
 
 Route::resource('home', 'HomeController');
+
+Route::resource('professores', 'ProfessoresController');
+
+Route::resource('cursos', 'CursosController');

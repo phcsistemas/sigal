@@ -9,7 +9,7 @@
                 <h4 class="modal-title" id="myModalLabel">Cadastro de Professores</h4>
             </div>
 
-        <div class="modal-body col-sm-pull-0">
+            <div class="modal-body col-sm-pull-0">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-2">
                         @if ($errors->any())

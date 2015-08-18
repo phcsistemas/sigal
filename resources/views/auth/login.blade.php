@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.templatelogin	')
 
 @section('content')
 	<head xmlns="http://www.w3.org/1999/html">
