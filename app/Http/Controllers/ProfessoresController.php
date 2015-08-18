@@ -29,8 +29,9 @@ class ProfessoresController extends Controller
     public function index()
     {
         $professores = $this->professores->all();
+        $cursos = Curso::all()->lists('nome_curso', 'id');
 
-        return view('professores.index', compact('professores'));
+        return view('professores.index', compact('professores', 'cursos'));
     }
 
     /**
@@ -40,7 +41,7 @@ class ProfessoresController extends Controller
      */
     public function create()
     {
-
+        return view('professores.create');
     }
 
     /**
@@ -53,7 +54,6 @@ class ProfessoresController extends Controller
     {
         $input = $request->except('_token');
         $this->professores->create($input);
-
 
         return redirect()->route('professores.index');
     }
@@ -77,7 +77,15 @@ class ProfessoresController extends Controller
      */
     public function edit($id)
     {
-        //
+        $professorEdit = $this->professores->find($id);
+        $cursos = Curso::all()->lists('nome_curso', 'id');
+
+        if (is_null($professorEdit))
+        {
+            return redirect()->route('professores.index');
+        }
+
+        return view('professores.edit', compact('professorEdit', 'cursos'));
     }
 
     /**
@@ -89,7 +97,11 @@ class ProfessoresController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->except('_method', '_token');
+        $professor = $this->professores->find($id);
+        $professor->update($input);
+
+        return redirect()->route('professores.index');
     }
 
     /**
@@ -100,6 +112,8 @@ class ProfessoresController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->professores->find($id)->delete();
+
+        return redirect()->route('professores.index');
     }
 }

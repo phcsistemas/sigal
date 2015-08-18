@@ -37,7 +37,7 @@
                                     <tr>
                                         <td>{{ $professor->nome }}</td>
                                         <td>{{ $professor->ra }}</td>
-                                        <td>{{ $professor->curso }}</td>
+                                        <td>{{ $cursos[$professor->curso_id] }}</td>
                                         <td>{{ $professor->cgu }}</td>
                                         <td>{{ $professor->email }}</td>
                                         <td>{{ $professor->fone }}</td>
