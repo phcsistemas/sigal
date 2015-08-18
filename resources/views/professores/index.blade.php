@@ -29,18 +29,27 @@
                                 <th>CGU</th>
                                 <th>Email</th>
                                 <th>Fone</th>
+                                <th>Opcoes</th>
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($professores as $professores)
+                                @foreach($professores as $professor)
                                     <tr>
-                                        <td>{{ $professores->nome }}</td>
-                                        <td>{{ $professores->ra }}</td>
-                                        <td>{{ $professores->curso }}</td>
-                                        <td>{{ $professores->cgu }}</td>
-                                        <td>{{ $professores->email }}</td>
-                                        <td>{{ $professores->fone }}</td>
-
+                                        <td>{{ $professor->nome }}</td>
+                                        <td>{{ $professor->ra }}</td>
+                                        <td>{{ $professor->curso }}</td>
+                                        <td>{{ $professor->cgu }}</td>
+                                        <td>{{ $professor->email }}</td>
+                                        <td>{{ $professor->fone }}</td>
+                                        <td align="center">
+                                            <button class="btn btn-primary btn-xs" data-toggle="modal"
+                                                    onclick="editModal({{ $professor->id }})">
+                                                Editar
+                                            </button>
+                                            {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'route' => array('professores.destroy', $professor->id))) !!}
+                                            {!! Form::submit('Deletar', array('class' => 'btn btn-danger btn-xs')) !!}
+                                            {!! Form::close() !!}
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -53,7 +62,7 @@
                 function editModal(id) {
                     $.ajax({
                         method: 'get',
-                        url: '/admin/professores/' + id + '/edit'}).then(function(data) {
+                        url: '/professores/' + id + '/edit'}).then(function(data) {
                         $(data).modal()
                     });
                 }
