@@ -18,6 +18,7 @@ class ProfessoresController extends Controller
 
     public function __construct(Professor $professor) {
         $this->professores = $professor;
+        $this->middleware('auth');
     }
 
     /**
