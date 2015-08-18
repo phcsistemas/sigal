@@ -33,3 +33,7 @@ Route::resource('home', 'HomeController');
 Route::resource('professores', 'ProfessoresController');
 
 Route::resource('cursos', 'CursosController');
+
+Route::get('/erro', function () {
+    return view('errors/503');
+});

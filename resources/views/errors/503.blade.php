@@ -34,13 +34,23 @@
             .title {
                 font-size: 72px;
                 margin-bottom: 40px;
+                color: white;
+                text-shadow: 3px 3px 1px #000000;
+            }
+            body {
+                background-image: url(assets/img/fundo404.jpg);
+                opacity: 2.0;
+                color: #080808;
+
+
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
+
+    <div align="center"class="container">
+            <div  class="content">
+                <div class="title">Ops... Parece que<br> voce esta perdido.</div>
             </div>
         </div>
     </body>
