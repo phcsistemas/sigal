@@ -49,7 +49,7 @@
 
 
 
-<nav  class="navbar navbar-inverse" style="width: 100%; border-bottom-width: 0px; border-radius: 0px ">
+<nav  class="navbar navbar-inverse navbar-fixed-top" style="width: 100%; border-bottom-width: 0px; border-radius: 0px ">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -89,13 +89,23 @@
 
 	@yield('content')
 
-	<div  class=" navbar navbar-inverse navbar-fixed-bottom navbar-collapse" style="-webkit-box-shadow: 0px -3px 10px #9d9d9d;">
-		<div class="container" >
-			<p class ="navbar-text navbar-right">Sistema de Gerenciamento Auditórios e Laboratórios </p>
 
-			 <div  class ="navbar-text navbar-left"</div><span style="color: #9d9d9d" class="glyphicon glyphicon-copyright-mark"></span> &nbspCopyright 2015 - CEUJI/ULBRA
-
+<footer class="site-footer">
+	<div class="container">
+		<div class="row">
 		</div>
+		<div class="bottom-footer">
+			<div class="col-md-5" style="color:#9d9d9d;"> <span style="color: #9d9d9d" class="glyphicon glyphicon-copyright-mark"></span> &nbspCopyright 2015 - CEUJI/ULBRA</div>
+			<div class="col-md-7">
+				<ul class="footer-nav" style="color:#9d9d9d;">
+					Sistema de Gerenciamento Auditórios e Laboratórios
+				</ul>
+			</div>
+		</div>
+	</div>
+	</footer>
+
+
 
 
 	@yield('script')

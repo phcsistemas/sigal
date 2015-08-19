@@ -5211,7 +5211,7 @@ a.list-group-item-danger.active:focus {
   border-color: #dddddd;
   -webkit-box-shadow: 0px 0px 5px 0px #dddddd;
   -moz-box-shadow: 0px 0px 5px 0px #dddddd;
-  box-shadow: 0px 0px 15px 0px #dddddd
+  box-shadow: 0px 0px 0px 0px #33647e
 
 }
 .panel-default > .panel-heading {
@@ -6312,5 +6312,43 @@ label,
 
 }
 
+.no-margin
+{
+    margin:0px;
+}
+
+.no-padding
+{
+  padding:0px;
+}
+
+.site-footer
+{
+    background-color: #213a4d;
+  color: #fff;
+}
 
 
+
+.bottom-footer
+{
+  border-top: 1px solid #b2b2b2;
+  margin-top: 10px;
+  padding-top: 10px;
+  color: #080808;
+}
+
+.footer-nav
+{
+    text-align: right;
+  list-style: none;
+}
+
+.footer-nav li
+{
+    display: inline;
+}
+
+.footer-nav a{
+
+  color: #b2b2b2}
