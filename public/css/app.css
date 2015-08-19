@@ -4200,9 +4200,13 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  background-color: #213a4d;
+  border-color: #213a4d;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
 }
+
+
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;
 }
@@ -4215,18 +4219,21 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #9d9d9d;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #9d9d9d;
+  color: #ababab;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: transparent;
+  background-color: #1d4857;
+
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
   background-color: #080808;
+
+  border-bottom-color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -5202,6 +5209,10 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default {
   border-color: #dddddd;
+  -webkit-box-shadow: 0px 0px 15px 0px #dddddd;
+  -moz-box-shadow: 0px 0px 15px 0px #dddddd;
+  box-shadow: 0px 0px 15px 0px #dddddd
+
 }
 .panel-default > .panel-heading {
   color: #333333;
