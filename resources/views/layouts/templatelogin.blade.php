@@ -7,7 +7,7 @@
 	<title>SIGAL</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png"
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 

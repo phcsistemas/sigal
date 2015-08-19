@@ -5,27 +5,25 @@
 
 		<style type="text/css">
 			body {
-				background-image: url("/assets/img/loginhomer.jpg");
+				background-image: url("/assets/img/login.jpg");
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-size: cover;
 			}
+
 		</style>
 
 	<body
 
 
 
-	<div class="container">
-		<p><br/></p>
-		<div class="row">
-			<div " class="col-md-4">
-			</div>
-			<div align="center"  class="col-md-7">
-				<h2 style="color:black">Sistema de Gerenciamento Auditórios e Laboratórios - CEUJI/ULBRA</h2>
-			</div>
-		</div>
-	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 <div class="container-fluid" >
 	<div class="row">
