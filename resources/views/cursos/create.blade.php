@@ -41,20 +41,17 @@
             <div class="form-group">
                 {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
                 <div class="col-sm-9">
-                    {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => '(xx)-xxxx-xxxx')) !!}
+                    {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => 'Digite apenas os numeros', 'id' => 'fone')) !!}
                 </div>
             </div>
 
-
-
-
-                <div class="form-group">
-                    <div align="center">
-                        {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-primary')) !!}
-                    </div>
+            <div class="form-group">
+                <div align="center">
+                    {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-primary')) !!}
                 </div>
+            </div>
 
-                {!! Form::close() !!}
+            {!! Form::close() !!}
 
             </div>
         </div>
