@@ -30,14 +30,14 @@
                 <div class="form-group">
                     {!! Form::label('predio', 'Predio:', array('class' => 'col-md-3 control-label')) !!}
                     <div class="col-sm-9">
-                        {!! Form::text('predio', Input::old('predio_au'), array('class' => 'form-control', 'placeholder' => 'Nome do predio')) !!}
+                        {!! Form::text('predio', Input::old('predio'), array('class' => 'form-control', 'placeholder' => 'Nome do predio')) !!}
                     </div>
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('andar', 'Andar:', array('class' => 'col-md-3 control-label')) !!}
                     <div class="col-sm-9">
-                        {!! Form::text('andar', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Andar do predio')) !!}
+                        {!! Form::text('andar', Input::old('andar'), array('class' => 'form-control', 'placeholder' => 'Andar do predio')) !!}
                     </div>
                 </div>
 
@@ -57,8 +57,8 @@
 
                 <div class="form-group">
                     {!! Form::label('tipo', 'Tipo:', array('class' => 'col-md-3 control-label')) !!}
-                    <div class="col-sm-3">
-                        {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio') !!}
+                    <div class="col-sm-9">
+                        {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio', array('class' => 'form-control')) !!}
                     </div>
                 </div>
 
