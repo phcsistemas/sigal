@@ -19,21 +19,25 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-inverse" style="border-radius: 0px">
+	<nav  class="navbar navbar-inverse" style="border-radius: 0px;
+	 										-webkit-box-shadow: 0px 3px 10px  #9d9d9d;
+	 										margin-bottom:40px; font-size: 15px;" >
 		<div class="container-fluid">
+			<!-- button para menu em smartphones -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle Navigation</span>
+					<span class="sr-only">Navegacao</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">SIGAL</a>
 			</div>
+			<!-- ------------------------------------------ -->
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="{{ url('home') }}">Home</a></li>
+
+					<li><a href="{{ url('home') }}">Inicio</a></li>
 					<li><a href="{{ url('salas') }}">Salas</a></li>
 					<li><a href="{{ url('professores') }}">Professores</a></li>
 					<li><a href="{{ url('cursos') }}">Cursos</a></li>
@@ -44,9 +48,9 @@
 						<li><a href="{{ url('/auth/login') }}">Login</a></li>
 					@else
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }}&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-user"></span></span> <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
+								<li><a href="{{ url('/auth/logout') }}">Sair</a></li>
 							</ul>
 						</li>
 					@endif
@@ -57,9 +61,11 @@
 
 	@yield('content')
 
-	<div class=" navbar navbar-inverse navbar-fixed-bottom navbar-collapse">
-		<div class="container">
-			<p class ="navbar-text">Sistema de Gerenciamento Auditórios e Laboratórios - CEUJI/ULBRA</p>
+	<div  class=" navbar navbar-inverse navbar-fixed-bottom navbar-collapse" style="-webkit-box-shadow: 0px -3px 10px #9d9d9d;">
+		<div class="container" >
+			<p class ="navbar-text navbar-right">Sistema de Gerenciamento Auditórios e Laboratórios </p>
+
+			 <div  class ="navbar-text navbar-left"</div><span style="color: #9d9d9d" class="glyphicon glyphicon-copyright-mark"></span> &nbspCopyright 2015 - CEUJI/ULBRA
 
 		</div>
 

@@ -3,7 +3,18 @@
 @section('content')
 	<head xmlns="http://www.w3.org/1999/html">
 
-	<body background="http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/Hi-Tech-Wallpaper-25.jpg">
+		<style type="text/css">
+			body {
+				background-image: url("/assets/img/loginhomer.jpg");
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+			}
+		</style>
+
+	<body
+
+
 
 	<div class="container">
 		<p><br/></p>
@@ -11,12 +22,12 @@
 			<div " class="col-md-4">
 			</div>
 			<div align="center"  class="col-md-7">
-				<h2 style="color:white">Sistema de Gerenciamento Auditórios e Laboratórios - CEUJI/ULBRA</h2>
+				<h2 style="color:black">Sistema de Gerenciamento Auditórios e Laboratórios - CEUJI/ULBRA</h2>
 			</div>
 		</div>
 	</div>
 
-<div class="container-fluid">
+<div class="container-fluid" >
 	<div class="row">
 		<div style="margin-top: 1%" top class="col-md-3 col-md-offset-1">
 			<div class="panel panel-default">
