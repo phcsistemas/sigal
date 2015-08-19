@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SIGAL</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/js/bootstrap.min.js') }}" rel="script">
@@ -36,6 +37,8 @@
 		$('#confirmDelete').find('.modal-footer #confirm').on('click', function(){
 			$(this).data('form').submit();
 		});
+
+
 	</script>
 </head>
 
@@ -56,7 +59,7 @@
 		</div>
 		<div  id="rolling-nav"   class="nav navbar-nav navbar-left">
 	<ul>
-		<li><a href="{{ url('home') }}" data-clone="Inicio">Inicio</a></li>
+		<li ><a href="{{ url('home') }}"  data-clone="Inicio">Início</a></li>
 		<li><a href="{{ url('salas') }}" data-clone="Salas">Salas</a></li>
 		<li><a href="{{ url('professores') }}"data-clone="Professores">Professores</a></li>
 		<li><a href="{{ url('cursos') }}"data-clone="Cursos">Cursos</a></li>

@@ -58,8 +58,8 @@
                 </div>
             </div>
 
-            @include('professores.delete_confirm')
 
+            @include('professores.delete_confirm')
             <script>
                 function editModal(id) {
                     $.ajax({
