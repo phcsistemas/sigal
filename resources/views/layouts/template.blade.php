@@ -38,46 +38,49 @@
 		});
 	</script>
 </head>
+
 <body>
-	<nav  class="navbar navbar-inverse" style="border-radius: 0px;
-	 										-webkit-box-shadow: 0px 3px 10px  #9d9d9d;
-	 										margin-bottom:40px; font-size: 15px;" >
-		<div class="container-fluid">
-			<!-- button para menu em smartphones -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Navegacao</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<!-- ------------------------------------------ -->
 
-			<div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
 
-					<li><a href="{{ url('home') }}">Inicio</a></li>
-					<li><a href="{{ url('salas') }}">Salas</a></li>
-					<li><a href="{{ url('professores') }}">Professores</a></li>
-					<li><a href="{{ url('cursos') }}">Cursos</a></li>
-				</ul>
 
-				<ul class="nav navbar-nav navbar-right">
-					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-					@else
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }}&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-user"></span></span> <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Sair</a></li>
-							</ul>
-						</li>
-					@endif
-				</ul>
-			</div>
+
+<nav  class="navbar navbar-inverse" style="width: 100%; border-bottom-width: 0px; border-radius: 0px ">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Navegacao</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
 		</div>
-	</nav>
+		<div  id="rolling-nav"   class="nav navbar-nav navbar-left">
+	<ul>
+		<li><a href="{{ url('home') }}" data-clone="Inicio">Inicio</a></li>
+		<li><a href="{{ url('salas') }}" data-clone="Salas">Salas</a></li>
+		<li><a href="{{ url('professores') }}"data-clone="Professores">Professores</a></li>
+		<li><a href="{{ url('cursos') }}"data-clone="Cursos">Cursos</a></li>
+	</ul>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			@if (Auth::guest())
+				<li><a href="{{ url('/auth/login') }}">Login</a></li>
+			@else
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }}&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-user"></span></span> <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="{{ url('/auth/logout') }}">Sair</a></li>
+					</ul>
+				</li>
+			@endif
+		</ul>
+	</div>
+
+
+</nav>
+
+
+
 
 	@yield('content')
 
