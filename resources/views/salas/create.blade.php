@@ -26,7 +26,7 @@
                         @endif
                     </div>
                 </div>
-                                {!! Form::open(array('style' => 'display: inline-block;','route' => 'salas.store', 'class' => 'form-horizontal')) !!}
+                {!! Form::open(array('style' => 'display: inline-block;','route' => 'salas.store', 'class' => 'form-horizontal')) !!}
 
                 <div class="form-group">
                     {!! Form::label('predio', 'Predio:', array('class' => 'col-md-2 control-label')) !!}
