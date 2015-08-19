@@ -57,9 +57,18 @@
                     <div class="col-sm-4">
                         {!! Form::text('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => 'Email')) !!}
                     </div>
+<<<<<<< HEAD
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
+                    <div class="col-sm-9">
+                        {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => 'Digite apenas os numeros', 'id' => 'fone')) !!}
+=======
                     {!! Form::label('fone', 'Fone:', array('class' => 'col-md-1 control-label')) !!}
                     <div class="col-sm-4">
                         {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => '(xx)-xxxx-xxxx')) !!}
+>>>>>>> 931af8e0203f2bb2336a8a6cafd2a721a308917c
                     </div>
                 </div>
 
