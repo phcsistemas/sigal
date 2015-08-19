@@ -39,6 +39,14 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if ($e instanceof CustomException) {
+            return response()->view('errors.503', [], 500);
+        }
+
+        if ($this->isHttpException($e)) {
+            return response()->view('errors.503', [], 404);
+        }
+
         return parent::render($request, $e);
     }
 }
