@@ -46,9 +46,9 @@
                                                     onclick="editModal({{ $professor->id }})">
                                                 Editar
                                             </button>
-                                            {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'route' => array('professores.destroy', $professor->id))) !!}
-                                            {!! Form::submit('Deletar', array('class' => 'btn btn-danger btn-xs')) !!}
-                                            {!! Form::close() !!}
+                                            <button class="btn btn-xs btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete">
+                                                <i class="glyphicon glyphicon-trash"></i> Deletar
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -57,6 +57,8 @@
                     </div>
                 </div>
             </div>
+
+            @include('professores.delete_confirm')
 
             <script>
                 function editModal(id) {

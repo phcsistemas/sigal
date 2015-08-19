@@ -7,6 +7,7 @@
 	<title>SIGAL</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	<link href="{{ asset('/js/bootstrap.min.js') }}" rel="script">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -14,9 +15,28 @@
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+	<script>
+		//Dialog show event handler
+		$('#confirmDelete').on('show.bs.modal', function (e) {
+			$message = $(e.relatedTarget).attr('data-message');
+			$(this).find('.modal-body p').text($message);
+			$title = $(e.relatedTarget).attr('data-title');
+			$(this).find('.modal-title').text($title);
+
+			// Pass form reference to modal for submission on yes/ok
+			var form = $(e.relatedTarget).closest('form');
+			$(this).find('.modal-footer #confirm').data('form', form);
+		});
+
+		//Form confirm (yes/ok) handler, submits form
+		$('#confirmDelete').find('.modal-footer #confirm').on('click', function(){
+			$(this).data('form').submit();
+		});
+	</script>
 </head>
 <body>
 	<nav  class="navbar navbar-inverse" style="border-radius: 0px;
