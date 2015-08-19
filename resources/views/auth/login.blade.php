@@ -5,7 +5,7 @@
 
 		<style type="text/css">
 			body {
-				background-image: url("/assets/img/loginhomer.jpg");
+				background-image: url("/assets/img/login.jpg");
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-size: cover;
