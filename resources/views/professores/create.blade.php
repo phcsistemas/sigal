@@ -41,7 +41,7 @@
                 <div class="form-group">
                     {!! Form::label('curso', 'Curso:', array('class' => 'col-md-2 control-label')) !!}
                     <div class="col-sm-9">
-                        {!! Form::text('curso', Input::old('curso'), array('class' => 'form-control', 'placeholder' => 'Curso do professor')) !!}
+                        {!! Form::select('curso_id', $cursos, Input::old('curso_id'), array('class' => 'form-control')) !!}
                     </div>
                 </div>
 
@@ -59,12 +59,12 @@
                     </div>
                 </div>
 
-            <div class="form-group">
-                {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
-                <div class="col-sm-9">
-                    {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => '(xx)-xxxx-xxxx')) !!}
+                <div class="form-group">
+                    {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
+                    <div class="col-sm-9">
+                        {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => '(xx)-xxxx-xxxx')) !!}
+                    </div>
                 </div>
-            </div>
 
                 <div class="form-group">
                     <div align="center">

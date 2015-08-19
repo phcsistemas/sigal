@@ -7,7 +7,7 @@
                             aria-hidden="true">&times;</span><span
                             class="sr-only">Close</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Editar sala</h4>
+                <h4 class="modal-title" id="myModalLabel">Editar professor</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -22,43 +22,50 @@
                     </div>
                 </div>
 
-                {!! Form::model($salaEdit, array(
+                {!! Form::model($professorEdit, array(
                     'class' => 'form-horizontal',
                     'method' => 'PATCH',
-                    'route' => array('salas.update', $salaEdit->id))) !!}
+                    'route' => array('professores.update', $professorEdit->id))) !!}
 
                 <div class="form-group">
-                    {!! Form::label('predio', 'Predio:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-3">
-                        {!! Form::text('predio', Input::old('predio_au'), array('class' => 'form-control', 'placeholder' => 'Nome do prédio')) !!}
+                    {!! Form::label('nome', 'Nome:', array('class' => 'col-md-2 control-label')) !!}
+                    <div class="col-sm-9">
+                        {!! Form::text('nome', Input::old('nome_au'), array('class' => 'form-control', 'placeholder' => 'Nome do professor')) !!}
                     </div>
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('andar', 'Andar do predio:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-3">
-                        {!! Form::text('andar', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Andar do prédio')) !!}
+                    {!! Form::label('Curso', 'RA:', array('class' => 'col-md-2 control-label')) !!}
+                    <div class="col-sm-9">
+                        {!! Form::text('ra', Input::old('ra'), array('class' => 'form-control', 'placeholder' => 'RA')) !!}
                     </div>
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('numero', 'Numero da sala:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-3">
-                        {!! Form::text('numero', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Número da aula')) !!}
+                    {!! Form::label('curso', 'Curso:', array('class' => 'col-md-2 control-label')) !!}
+                    <div class="col-sm-9">
+                        {!! Form::select('curso_id', $cursos, Input::old('curso_id'), array('class' => 'form-control')) !!}
                     </div>
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('capacidade', 'Capacidade:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-3">
-                        {!! Form::text('capacidade', Input::old('capacidade'), array('class' => 'form-control', 'placeholder' => 'Capacidade')) !!}
+                    {!! Form::label('cgu', 'CGU:', array('class' => 'col-md-2 control-label')) !!}
+                    <div class="col-sm-9">
+                        {!! Form::text('cgu', Input::old('cgu'), array('class' => 'form-control', 'placeholder' => 'CGU')) !!}
                     </div>
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('tipo', 'Tipo:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-7">
-                        {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio') !!}
+                    {!! Form::label('email', 'Email:', array('class' => 'col-md-2 control-label')) !!}
+                    <div class="col-sm-9">
+                        {!! Form::text('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => 'Email')) !!}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
+                    <div class="col-sm-9">
+                        {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => '(xx)-xxxx-xxxx')) !!}
                     </div>
                 </div>
 
