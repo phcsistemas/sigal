@@ -43,6 +43,7 @@
                                             {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'route' => array('cursos.destroy', $curso->id))) !!}
                                             {!! Form::submit('Deletar', array('class' => 'btn btn-danger btn-xs')) !!}
                                             {!! Form::close() !!}
+                                            <button class="btn btn-danger btn-xs" onclick="confirmDelete()">Deletar</button>
                                         </td>
                                     </tr>
                                 @endforeach
