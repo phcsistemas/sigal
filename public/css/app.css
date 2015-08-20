@@ -6381,4 +6381,31 @@ fieldset[disabled] .btn-confirm.active {
   color: #305e79;
   background-color: #ffffff;
 }
+.btn-voltar {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-voltar:hover,
+.btn-voltar:focus,
+.btn-voltar.focus,
+.btn-voltar:active,
+.btn-voltar.active,
+.open > .dropdown-toggle.btn-voltar {
+  color: #fff;
+  border-color: #fff;
+}
 
+
+.btn-voltar404 {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-voltar404:hover,
+.btn-voltar404:focus,
+.btn-voltar404.focus,
+.btn-voltar404:active,
+.btn-voltar404.active,
+.open > .dropdown-toggle.btn-voltar404 {
+  color: #fff;
+  border-color: #ffffff;
+}

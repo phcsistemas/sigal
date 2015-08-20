@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,9 +85,9 @@
 	<div class="rodape">
 
 		<div class="container" >
-			<p class ="navbar-text navbar-right">Sistema de Gerenciamento Auditórios e Laboratórios </p>
+			<p class ="navbar-text navbar-right">Sistema de Gerenciamento Auditórios e Laboratórios - CEUJI/ULBRA </p>
 
-			<div  class ="navbar-text navbar-left"</div><span class="glyphicon glyphicon-copyright-mark"></span> &nbspCopyright 2015 - CEUJI/ULBRA
+			<div  class ="navbar-text navbar-left"</div><span class="glyphicon glyphicon-copyright-mark"></span> &nbspCopyright 2015 -<a href="{{ url('/desenvolvedores') }}"> <span style="color: #a7abab" >Desenvolvedores</a></span>
 
 	</div>
 </div>

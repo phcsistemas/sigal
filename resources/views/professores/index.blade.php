@@ -43,7 +43,7 @@
                                         <td align="center">
                                             <button class="btn btn-warning btn-sm" data-toggle="modal"
                                                     onclick="editModal({{ $professor->id }})">
-                                                Editar
+                                                <i class="glyphicon glyphicon-pencil"></i> Editar
                                             </button>
                                             <button class="btn btn-danger btn-sm" type="button" data-toggle="modal" data-target="#confirmDelete">
                                                 <i class="glyphicon glyphicon-trash"></i> Deletar

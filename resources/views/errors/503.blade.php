@@ -56,10 +56,9 @@
             </div><br>
         <!-- Large button group -->
         <div align="center" class="btn-group">
-            <button type="button" class="btn btn-default" aria-label="Left Align">
-                <span aria-hidden="true"><a href="{{ url('home') }}">Voltar para o inicio</a></span>
 
-            </button>
+            <a href="{{ url('home') }}" class="btn btn-voltar404 btn-lg" ><span class="glyphicon glyphicon-arrow-left" ></span> Voltar para pagina inicial</a>
+
         </div>
 
 
