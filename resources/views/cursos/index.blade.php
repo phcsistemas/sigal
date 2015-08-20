@@ -36,11 +36,11 @@
                                         <td>{{ $curso->coordenador }}</td>
                                         <td>{{ $curso->fone }}</td>
                                         <td align="center">
-                                            <button class="btn btn-primary btn-xs" data-toggle="modal"
+                                            <button class="btn btn-warning btn-sm" data-toggle="modal"
                                                     onclick="editModal({{ $curso->id }})">
                                                 Editar
                                             </button>
-                                            <button class="btn btn-xs btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete">
+                                            <button class="btn btn-danger btn-sm" type="button" data-toggle="modal" data-target="#confirmDelete">
                                                 <i class="glyphicon glyphicon-trash"></i> Deletar
                                             </button>
                                         </td>

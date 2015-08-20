@@ -1,7 +1,8 @@
 <!-- Modal -->
-<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" align="center">
-    <div class="modal-dialog">
-        <div class="modal-content col-lg-9">
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" align="center" style="overflow:hidden">
+    <div class="modal-dialog  col-sm-push-0" >
+        <div class="modal-content " align="center" >
+            <div class="modal-content " >
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span
                             aria-hidden="true">&times;</span><span
@@ -33,8 +34,12 @@
 
                 <div class="form-group">
                     {!! Form::label('Curso', 'RA:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
+                    <div class="col-sm-4">
                         {!! Form::text('ra', Input::old('ra'), array('class' => 'form-control', 'placeholder' => 'RA')) !!}
+                    </div>
+                    {!! Form::label('cgu', 'CGU:', array('class' => 'col-md-1 control-label')) !!}
+                    <div class="col-sm-4">
+                        {!! Form::text('cgu', Input::old('cgu'), array('class' => 'form-control', 'placeholder' => 'CGU')) !!}
                     </div>
                 </div>
 
@@ -45,36 +50,30 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    {!! Form::label('cgu', 'CGU:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('cgu', Input::old('cgu'), array('class' => 'form-control', 'placeholder' => 'CGU')) !!}
-                    </div>
-                </div>
 
                 <div class="form-group">
                     {!! Form::label('email', 'Email:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
+                    <div class="col-sm-4">
                         {!! Form::text('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => 'Email')) !!}
                     </div>
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
+                    {!! Form::label('fone', 'Fone:', array('class' => 'col-md-1 control-label')) !!}
+                    <div class="col-sm-4">
                         {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => 'Digite apenas os numeros', 'id' => 'fone')) !!}
                     </div>
                 </div>
 
+
+
                 <div class="form-group">
                     <div align="center">
-                        {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-primary')) !!}
+                        {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-confirm')) !!}
                     </div>
                 </div>
 
                 {!! Form::close() !!}
 
             </div>
+        </div>
         </div>
     </div>
 </div>

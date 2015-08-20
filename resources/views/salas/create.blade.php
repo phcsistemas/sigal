@@ -1,8 +1,8 @@
 <!-- Modal -->
 
-<div class="modal fade " id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+<div class="modal fade " id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="overflow:hidden">
     <div class="modal-dialog  col-sm-push-0" >
-        <div  class="modal-content " align="center" >
+        <div  class="modal-content " >
             <div class="modal-content " >
                 <div class="modal-header">
                 <button type="button" class="close" id="close" data-dismiss="modal" onclick="fechar();"><span
@@ -42,27 +42,32 @@
 
 
                 <div class="form-group">
-                    {!! Form::label('numero', 'Número:', array('class' => 'col-md-2 control-label')) !!}
+                    {!! Form::label('numero', 'Numero:', array('class' => 'col-md-2 control-label')) !!}
                     <div class="col-sm-4">
-                        {!! Form::text('numero', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Número da sala')) !!}
-                    </div>{!! Form::label('tipo', 'Tipo:', array('class' => 'col-md-1 control-label')) !!}
-                    <div class="col-sm-4">
-                        {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio', array('class' => 'form-control')) !!}
+                        {!! Form::text('numero', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Numero da sala')) !!}
                     </div>
+                    {!! Form::label('capacidade', 'Cap.:', array('class' => 'col-md-1 control-label')) !!}
+                    <div class="col-sm-4">
+                        {!! Form::text('capacidade', Input::old('capacidade'), array('class' => 'form-control', 'placeholder' => 'Capacidade')) !!}
+                    </div>
+
                 </div>
 
 
+                <div class="form-group">
+                {!! Form::label('tipo', 'Tipo:', array('class' => 'col-md-2 control-label')) !!}
+                <div class="col-sm-4">
+                    {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio', array('class' => 'form-control')) !!}
+                </div>
+                </div>
 
                 <div class="form-group">
-                    {!! Form::label('capacidade', 'Capacidade.:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('capacidade', Input::old('capacidade'), array('class' => 'form-control', 'placeholder' => 'Capacidade')) !!}
-                    </div>
+
                 </div>
 
                 <div class="form-group">
                     <div align="center">
-                        {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-primary')) !!}
+                        {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-confirm')) !!}
                     </div>
                 </div>
 
