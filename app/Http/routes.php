@@ -31,3 +31,7 @@ Route::resource('home', 'HomeController');
 Route::resource('professores', 'ProfessoresController');
 
 Route::resource('cursos', 'CursosController');
+
+Route::get('/desenvolvedores', function () {
+    return view('desenvolvedores/index');
+});

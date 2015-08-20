@@ -2099,10 +2099,10 @@ th {
   border-bottom-width: 2px;
 }
 .table-striped > tbody > tr:nth-child(odd) {
-  background-color: #f9f9f9;
+  background-color: #f3f3f3;
 }
 .table-hover > tbody > tr:hover {
-  background-color: #f5f5f5;
+  background-color: #c1d3d4;
 }
 table col[class*="col-"] {
   position: static;
@@ -4232,7 +4232,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
   background-color: #080808;
-
   border-bottom-color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
@@ -5211,7 +5210,7 @@ a.list-group-item-danger.active:focus {
   border-color: #dddddd;
   -webkit-box-shadow: 0px 0px 5px 0px #dddddd;
   -moz-box-shadow: 0px 0px 5px 0px #dddddd;
-  box-shadow: 0px 0px 15px 0px #dddddd
+  box-shadow: 0px 0px 0px 0px #33647e
 
 }
 .panel-default > .panel-heading {
@@ -5392,7 +5391,6 @@ button.close {
   -webkit-appearance: none;
 }
 .modal-open {
-  overflow: hidden;
 }
 .modal {
   display: none;
@@ -5488,7 +5486,6 @@ button.close {
   top: -9999px;
   width: 50px;
   height: 50px;
-  overflow: scroll;
 }
 @media (min-width: 768px) {
   .modal-dialog {
@@ -6311,6 +6308,199 @@ label,
   margin-bottom:1px;
 
 }
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+.tudo {
+  min-height:100%;
+  position:relative;
+}
+
+.conteudo {
+  padding:10px;
+  padding-bottom:20px;   /* Mesma Altura do Rodapé */
+  margin-top:0px
+
+}
+.rodape {
+  position:absolute;
+  color: #9d9d9d;
+  bottom:0;
+  width:100%;
+  height:50px;   /* Mesma Altura do Rodapé */
+  background:#213a4d;
+}
 
 
 
+.btn-confirm {
+  color: #ffffff;
+  background-color: #305e79;
+  border-color: #305e79;
+}
+.btn-confirm:hover,
+.btn-confirm:focus,
+.btn-confirm.focus,
+.btn-confirm:active,
+.btn-confirm.active,
+.open > .dropdown-toggle.btn-confirm {
+  color: #ffffff;
+  background-color: #305e79;
+  border-color: #305e79;
+}
+.btn-confirm:active,
+.btn-confirm.active,
+.open > .dropdown-toggle.btn-confirm {
+  background-image: none;
+}
+.btn-confirm.disabled,
+.btn-confirm[disabled],
+fieldset[disabled] .btn-confirm,
+.btn-confirm.disabled:hover,
+.btn-confirm[disabled]:hover,
+fieldset[disabled] .btn-confirm:hover,
+.btn-confirm.disabled:focus,
+.btn-confirm[disabled]:focus,
+fieldset[disabled] .btn-confirm:focus,
+.btn-confirm.disabled.focus,
+.btn-confirm[disabled].focus,
+fieldset[disabled] .btn-confirm.focus,
+.btn-confirm.disabled:active,
+.btn-confirm[disabled]:active,
+fieldset[disabled] .btn-confirm:active,
+.btn-confirm.disabled.active,
+.btn-confirm[disabled].active,
+fieldset[disabled] .btn-confirm.active {
+  background-color: #305e79;
+  border-color: #305e79;
+}
+.btn-confirm .badge {
+  color: #305e79;
+  background-color: #ffffff;
+}
+.btn-voltar {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-voltar:hover,
+.btn-voltar:focus,
+.btn-voltar.focus,
+.btn-voltar:active,
+.btn-voltar.active,
+.open > .dropdown-toggle.btn-voltar {
+  color: #fff;
+  border-color: #fff;
+}
+
+
+.btn-voltar404 {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-voltar404:hover,
+.btn-voltar404:focus,
+.btn-voltar404.focus,
+.btn-voltar404:active,
+.btn-voltar404.active,
+.open > .dropdown-toggle.btn-voltar404 {
+  color: #fff;
+  border-color: #ffffff;
+}
+
+
+.btn-editar {
+  color: #ffffff;
+  background-color: #8b8e94;
+  border-color: #8b8e94;
+}
+.btn-editar:hover,
+.btn-editar:focus,
+.btn-editar.focus,
+.btn-editar:active,
+.btn-editar.active,
+.open > .dropdown-toggle.btn-editar {
+  color: #ffffff;
+  background-color: #6a6d73;
+  border-color: #6a6d73;
+}
+.btn-editar:active,
+.btn-editar.active,
+.open > .dropdown-toggle.btn-editar {
+  background-image: none;
+}
+.btn-editar.disabled,
+.btn-editar[disabled],
+fieldset[disabled] .btn-editar,
+.btn-editar.disabled:hover,
+.btn-editar[disabled]:hover,
+fieldset[disabled] .btn-editar:hover,
+.btn-editar.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-editar:focus,
+.btn-editar.disabled.focus,
+.btn-warning[disabled].focus,
+fieldset[disabled] .btn-editar.focus,
+.btn-editar.disabled:active,
+.btn-editar[disabled]:active,
+fieldset[disabled] .btn-editar:active,
+.btn-editar.disabled.active,
+.btn-editar[disabled].active,
+fieldset[disabled] .btn-editar.active {
+  background-color: #617784;
+  border-color: #617784;
+}
+.btn-editar .badge {
+  color: #617784;
+  background-color: #ffffff;
+}
+
+
+
+.btn-deletar {
+  color: #ffffff;
+  background-color: #c35956;
+  border-color: #c35956;
+}
+.btn-deletar:hover,
+.btn-deletar:focus,
+.btn-deletar.focus,
+.btn-deletar:active,
+.btn-deletar.active,
+.open > .dropdown-toggle.btn-deletar {
+  color: #ffffff;
+  background-color: #ba392d;
+  border-color: #ba392d;
+}
+.btn-deletar:active,
+.btn-deletar.active,
+.open > .dropdown-toggle.btn-deletar {
+  background-image: none;
+}
+.btn-deletar.disabled,
+.btn-deletar[disabled],
+fieldset[disabled] .btn-deletar,
+.btn-deletar.disabled:hover,
+.btn-deletar[disabled]:hover,
+fieldset[disabled] .btn-deletar:hover,
+.btn-deletar.disabled:focus,
+.btn-deletar[disabled]:focus,
+fieldset[disabled] .btn-deletar:focus,
+.btn-deletar.disabled.focus,
+.btn-deletar[disabled].focus,
+fieldset[disabled] .btn-deletar.focus,
+.btn-deletar.disabled:active,
+.btn-deletar[disabled]:active,
+fieldset[disabled] .btn-deletar:active,
+.btn-deletar.disabled.active,
+.btn-deletar[disabled].active,
+fieldset[disabled] .btn-deletar.active {
+  background-color: #ba392d;
+  border-color: #ba392d;
+}
+.btn-deletar .badge {
+  color: #ba392d;
+  background-color: #ffffff;
+}

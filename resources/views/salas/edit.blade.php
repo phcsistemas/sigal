@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="overflow:hidden">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -28,45 +28,40 @@
                     'route' => array('salas.update', $salaEdit->id))) !!}
 
                 <div class="form-group">
-                    {!! Form::label('predio', 'Predio:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-3">
+                    {!! Form::label('predio', 'Predio:', array('class' => 'col-md-1 control-label')) !!}
+                    <div class="col-sm-4">
                         {!! Form::text('predio', Input::old('predio_au'), array('class' => 'form-control', 'placeholder' => 'Nome do prédio')) !!}
                     </div>
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('andar', 'Andar do predio:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-3">
+                    {!! Form::label('andar', 'Andar do predio:', array('class' => 'col-md-3 control-label')) !!}
+                    <div class="col-sm-4">
                         {!! Form::text('andar', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Andar do prédio')) !!}
                     </div>
                 </div>
 
-                <div class="form-group">
-                    {!! Form::label('numero', 'Numero da sala:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-3">
-                        {!! Form::text('numero', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Número da aula')) !!}
-                    </div>
-                </div>
+
 
                 <div class="form-group">
-                    {!! Form::label('capacidade', 'Capacidade:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-3">
+                    {!! Form::label('numero', 'Numero:', array('class' => 'col-md-1 control-label')) !!}
+                    <div class="col-sm-4">
+                        {!! Form::text('numero', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Número da aula')) !!}
+                    </div>
+                    {!! Form::label('capacidade', 'Capacidade:', array('class' => 'col-md-3 control-label')) !!}
+                    <div class="col-sm-4">
                         {!! Form::text('capacidade', Input::old('capacidade'), array('class' => 'form-control', 'placeholder' => 'Capacidade')) !!}
                     </div>
                 </div>
 
+
+
                 <div class="form-group">
-                    {!! Form::label('tipo', 'Tipo:', array('class' => 'col-md-4 control-label')) !!}
-                    <div class="col-sm-7">
-                        {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio') !!}
+                    {!! Form::label('tipo', 'Tipo:', array('class' => 'col-md-1 control-label')) !!}
+                    <div class="col-sm-4">
+                        {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio', array('class' => 'form-control')) !!}
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">&nbsp;</label>
-
-                    <div class="col-sm-10">
-                        {!! Form::submit('Atualizar', array('class' => 'btn btn-lg btn-primary')) !!}
+                <div class="form-group" align="center">
+                        {!! Form::submit('Atualizar', array('class' => 'btn btn-success')) !!}
                     </div>
                 </div>
 

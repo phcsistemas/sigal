@@ -1,8 +1,8 @@
 <!-- Modal -->
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="overflow:hidden">
+    <div class="modal-dialog " >
+        <div class="modal-content ">
+            <div class="modal-header ">
                 <button type="button" class="close" id="close" data-dismiss="modal" onclick="fechar();"><span
                             aria-hidden="true">&times;</span><span
                             class="sr-only">Close</span>
@@ -49,10 +49,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">&nbsp;</label>
-
-                    <div class="col-sm-10">
-                        {!! Form::submit('Atualizar', array('class' => 'btn btn-lg btn-primary')) !!}
+                    <div align="center" >
+                        {!! Form::submit('Atualizar', array('class' => 'btn btn-success')) !!}
                     </div>
                 </div>
 

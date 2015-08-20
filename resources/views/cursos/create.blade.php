@@ -1,8 +1,8 @@
 <!-- Modal -->
 <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" align="center">
     <div class="modal-dialog  col-sm-push-0" >
-        <div  class="modal-content " align="center" >
-            <div class="modal-content  " >
+        <div class="modal-content " align="center" >
+            <div class="modal-content " >
             <div class="modal-header ">
                 <button type="button" class="close" id="close" data-dismiss="modal"><span
                             aria-hidden="true">&times;</span><span
@@ -48,7 +48,7 @@
 
             <div class="form-group">
                 <div align="center">
-                    {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-primary')) !!}
+                    {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-confirm')) !!}
                 </div>
             </div>
 

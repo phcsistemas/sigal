@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="overflow:hidden">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-2">
                         @if ($errors->any())
-                            <div class="alert alert-danger">
+                            <div class="alert alert-deletar">
                                 <ul>
                                     {!! implode('', $errors->all('<li class="error">:message</li>')) !!}
                                 </ul>
@@ -36,8 +36,12 @@
 
                 <div class="form-group">
                     {!! Form::label('Curso', 'RA:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
+                    <div class="col-sm-4">
                         {!! Form::text('ra', Input::old('ra'), array('class' => 'form-control', 'placeholder' => 'RA')) !!}
+                    </div>
+                    {!! Form::label('cgu', 'CGU:', array('class' => 'col-md-1 control-label')) !!}
+                    <div class="col-sm-4">
+                        {!! Form::text('cgu', Input::old('cgu'), array('class' => 'form-control', 'placeholder' => 'CGU')) !!}
                     </div>
                 </div>
 
@@ -48,32 +52,22 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    {!! Form::label('cgu', 'CGU:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('cgu', Input::old('cgu'), array('class' => 'form-control', 'placeholder' => 'CGU')) !!}
-                    </div>
-                </div>
 
                 <div class="form-group">
                     {!! Form::label('email', 'Email:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
+                    <div class="col-sm-4">
                         {!! Form::text('email', Input::old('email'), array('class' => 'form-control', 'placeholder' => 'Email')) !!}
                     </div>
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => '(xx)-xxxx-xxxx')) !!}
+                    {!! Form::label('fone', 'Fone:', array('class' => 'col-md-1 control-label')) !!}
+                    <div class="col-sm-4">
+                        {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => 'Digite apenas os numeros', 'id' => 'fone')) !!}
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">&nbsp;</label>
 
-                    <div class="col-sm-10">
-                        {!! Form::submit('Atualizar', array('class' => 'btn btn-lg btn-primary')) !!}
+                <div class="form-group">
+                    <div align="center" >
+                        {!! Form::submit('Atualizar', array('class' => 'btn btn-success')) !!}
                     </div>
                 </div>
 

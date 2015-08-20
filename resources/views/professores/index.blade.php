@@ -4,7 +4,6 @@
 
     <section class="wrap">
         <div class="container">
-
             <button  class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createModal">
               Adicionar novo professor
             </button>
@@ -42,11 +41,11 @@
                                         <td>{{ $professor->email }}</td>
                                         <td>{{ $professor->fone }}</td>
                                         <td align="center">
-                                            <button class="btn btn-primary btn-xs" data-toggle="modal"
+                                            <button class="btn btn-editar btn-sm" data-toggle="modal"
                                                     onclick="editModal({{ $professor->id }})">
-                                                Editar
+                                                <i class="glyphicon glyphicon-pencil"></i> Editar
                                             </button>
-                                            <button class="btn btn-xs btn-danger" type="button" data-toggle="modal" data-target="#confirmDelete">
+                                            <button class="btn btn-deletar btn-sm" type="button" data-toggle="modal" data-target="#confirmDelete">
                                                 <i class="glyphicon glyphicon-trash"></i> Deletar
                                             </button>
                                         </td>
@@ -58,8 +57,8 @@
                 </div>
             </div>
 
-
             @include('professores.delete_confirm')
+
             <script>
                 function editModal(id) {
                     $.ajax({
