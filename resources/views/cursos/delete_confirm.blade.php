@@ -12,7 +12,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                 {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'route' => array('cursos.destroy', $curso->id))) !!}
-                {!! Form::submit('Deletar', array('class' => 'btn btn-danger')) !!}
+                {!! Form::submit('Deletar', array('class' => 'btn btn-deletar')) !!}
                 {!! Form::close() !!}
             </div>
         </div>

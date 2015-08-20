@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns="http://www.w3.org/1999/html">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SIGAL</title>
@@ -85,7 +85,7 @@
 	<div class="rodape">
 
 		<div class="container" >
-			<p class ="navbar-text navbar-right">Sistema de Gerenciamento Auditórios e Laboratórios - CEUJI/ULBRA </p>
+			<p class ="navbar-text navbar-right">Sistema de Gerenciamento Auditórios e Laboratórios - CEULJI/ULBRA </p>
 
 			<div  class ="navbar-text navbar-left"</div><span class="glyphicon glyphicon-copyright-mark"></span> &nbspCopyright 2015 -<a href="{{ url('/desenvolvedores') }}"> <span style="color: #a7abab" >Desenvolvedores</a></span>
 

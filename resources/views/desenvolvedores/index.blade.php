@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns="http://www.w3.org/1999/html">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIGAL</title>
@@ -91,14 +91,14 @@
         <div class="back" align="center">
             <div style='position:relative; top:0px; left:0px;'>
                 <img src=/assets/img/desenvback2.jpg border=0>
-                <div style='position:absolute; top:125px; left:60px;'>
-                    <a href = "https://www.facebook.com/jacksoncarelli"> <img src=/assets/img/icones/face.png style="width: 30px"></a>
+                <div style='position:absolute; top:60px; left:40px;'>
+                    <a href = "https://www.facebook.com/jefferson.gouveia.0?fref=ts"> <img src=/assets/img/icones/face.png style="width: 40px"></a>
                 </div>
-                <div style='position:absolute; top:125px; left:110px;'>
-                    <a href = "jacksoncarelli@gmail.com"> <img  src=/assets/img/icones/gmail.png style="width: 30px">
+                <div style='position:absolute; top:60px; left:100px;'>
+                    <a href = "#"> <img  src=/assets/img/icones/gmail.png style="width: 40px">
                 </div>
-                <div style='position:absolute; top:125px; left:160px;'>
-                    <a href = "https://www.linkedin.com/pub/jackson-carelli/104/92/417"> <img src=/assets/img/icones/liked.png style="width: 30px"><a>
+                <div style='position:absolute; top:60px; left:160px;'>
+                    <a href = "https://br.linkedin.com/pub/jefferson-gouveia/a7/63a/a73"> <img src=/assets/img/icones/liked.png style="width: 40px"><a>
                 </div>
 
             </div>
@@ -116,14 +116,14 @@
         <div class="back" align="center">
             <div style='position:relative; top:0px; left:0px;'>
                 <img src=/assets/img/desenvback1.jpg border=0>
-                <div style='position:absolute; top:125px; left:60px;'>
-                    <a href = "https://www.facebook.com/jacksoncarelli"> <img src=/assets/img/icones/face.png style="width: 30px"></a>
+                <div style='position:absolute; top:60px; left:40px;'>
+                    <a href = "https://www.facebook.com/jacksoncarelli"> <img src=/assets/img/icones/face.png style="width: 40px"></a>
                 </div>
-                <div style='position:absolute; top:125px; left:110px;'>
-                    <a href = "jacksoncarelli@gmail.com"> <img  src=/assets/img/icones/gmail.png style="width: 30px">
+                <div style='position:absolute; top:60px; left:100px;'>
+                    <a href = "#"> <img  src=/assets/img/icones/gmail.png style="width: 40px">
                 </div>
-                <div style='position:absolute; top:125px; left:160px;'>
-                    <a href = "https://www.linkedin.com/pub/jackson-carelli/104/92/417"> <img src=/assets/img/icones/liked.png style="width: 30px">
+                <div style='position:absolute; top:60px; left:160px;'>
+                    <a href = "https://www.linkedin.com/pub/jackson-carelli/104/92/417"> <img src=/assets/img/icones/liked.png style="width: 40px">
                 </div>
             </div>
         </div>

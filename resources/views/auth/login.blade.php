@@ -12,11 +12,8 @@
 			}
 
 		</style>
-
+</head>
 	<body
-
-
-
 	<br>
 	<br>
 	<br>
@@ -82,4 +79,5 @@
 	</div>
 </div>
 	</body>
+
 @endsection
