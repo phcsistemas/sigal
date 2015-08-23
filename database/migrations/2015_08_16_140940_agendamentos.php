@@ -14,14 +14,21 @@ class Agendamentos extends Migration
     {
         Schema::create('agendamentos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('sala_id')->unsigned();
-            $table->foreign('sala_id')->references('id')->on('salas');
+
             $table->integer('prof_id')->unsigned();
             $table->foreign('prof_id')->references('id')->on('professores');
+
+            $table->integer('usuario_id')->unsigned();
+            $table->foreign('usuario_id')->references('id')->on('users');
+
+            $table->integer('sala_id')->unsigned();
+            $table->foreign('sala_id')->references('id')->on('salas');
+
+            $table->string('tipo');
+            $table->text('descricao');
             $table->date('dia');
             $table->time('hora_inicio');
             $table->time('hora_fim');
-            $table->string('tipo');
             $table->timestamps();
         });
     }

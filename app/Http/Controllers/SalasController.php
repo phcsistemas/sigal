@@ -31,7 +31,13 @@ class SalasController extends Controller
     {
         $salas = $this->salas->all();
 
-        return view('salas.index', compact('salas'));
+        if(isset($salas)) {
+            $message = 'Nao ha salas registradas ainda!';
+
+            return view('layouts.empty', compact('message'));
+        } else {
+            return view('salas.index', compact('salas'));
+        }
     }
 
     /**
