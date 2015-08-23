@@ -6245,7 +6245,7 @@ label,
   color:white;
   text-transform:uppercase;
   /* outline:1px solid; */
-  width:550px; /* Fixed width. Measure it manually */
+  width:700px; /* Fixed width. Measure it manually */
   margin:0px auto;
 
   display: inline-table;
@@ -6503,4 +6503,91 @@ fieldset[disabled] .btn-deletar.active {
 .btn-deletar .badge {
   color: #ba392d;
   background-color: #ffffff;
+}
+
+
+
+.form-controltable {
+  display: block;
+  width: 300px;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-controltable:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-controltable::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.form-controltable:-ms-input-placeholder {
+  color: #999999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.form-controltable[disabled],
+.form-controltable[readonly],
+fieldset[disabled] .form-controltable {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+
+.form-controltablepequeno {
+  display: block;
+  width: 100px;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-controltablepequeno:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-controltablepequeno::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.form-controltablepequeno:-ms-input-placeholder {
+  color: #999999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.form-controltablepequeno[disabled],
+.form-controltablepequeno[readonly],
+fieldset[disabled] .form-controltablepequeno {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+
+
+
+
+
+.table-zebra > tbody > tr:nth-child(even) {
+  background-color: #f3f3f3;
 }

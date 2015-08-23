@@ -7,7 +7,7 @@
                             aria-hidden="true">&times;</span><span
                             class="sr-only">Close</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Editar sala</h4>
+                <h4 class="modal-title" id="myModalLabel" ali>Editar sala</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -60,8 +60,8 @@
                     </div>
                 </div>
 
-                <div class="form-group" align="center">
-                        {!! Form::submit('Atualizar', array('class' => 'btn btn-success')) !!}
+                <div class="modal-footer" align="center">
+                        {!! Form::submit('Atualizar', array('class' => 'btn btn-lg btn-success')) !!}
                     </div>
                 </div>
 

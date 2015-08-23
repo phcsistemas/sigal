@@ -48,9 +48,9 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="modal-footer">
                     <div align="center" >
-                        {!! Form::submit('Atualizar', array('class' => 'btn btn-success')) !!}
+                        {!! Form::submit('Atualizar', array('class' => 'btn btn-lg btn-success')) !!}
                     </div>
                 </div>
 

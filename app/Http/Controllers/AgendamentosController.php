@@ -7,30 +7,25 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Curso;
+use App\Agendamento;
 use Illuminate\Support\Facades\Input;
 
-class CursosController extends Controller
+
+class AgendamentosController extends Controller
 {
+    protected $agendamentos;
 
-
-    protected $cursos;
-
-    public function __construct(Curso $curso) {
-        $this->cursos = $curso;
+    public function __construct(Agendamento $agendamentos)
+    {
+        $this->agendamentos = $agendamentos;
         $this->middleware('auth');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
+
     public function index()
     {
-        $cursos = $this->cursos->all();
-
-        return view('cursos.index', compact('cursos'));
+        $agendamentos = $this->agendamentos->all();
+        return view('agendamentos.index', compact('agendamentos'));
     }
 
     /**
@@ -51,11 +46,7 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->except('_token');
-        $this->cursos->create($input);
-
-        return redirect()->route('cursos.index');
-
+        //
     }
 
     /**
@@ -77,14 +68,7 @@ class CursosController extends Controller
      */
     public function edit($id)
     {
-        $cursoEdit = $this->cursos->find($id);
-
-        if (is_null($cursoEdit))
-        {
-            return redirect()->route('cursos.index');
-        }
-
-        return view('cursos.edit', compact('cursoEdit'));
+        //
     }
 
     /**
@@ -96,11 +80,7 @@ class CursosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->except('_method', '_token');
-        $curso = $this->cursos->find($id);
-        $curso->update($input);
-
-        return redirect()->route('cursos.index');
+        //
     }
 
     /**
@@ -111,8 +91,6 @@ class CursosController extends Controller
      */
     public function destroy($id)
     {
-        $this->cursos->find($id)->delete();
-
-        return redirect()->route('cursos.index');
+        //
     }
 }

@@ -52,6 +52,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
 					</button>
 				</div>
 				<div  id="rolling-nav"   class="nav navbar-nav navbar-left">
@@ -60,6 +61,7 @@
 						<li><a href="{{ url('salas') }}" data-clone="Salas">Salas</a></li>
 						<li><a href="{{ url('professores') }}"data-clone="Professores">Professores</a></li>
 						<li><a href="{{ url('cursos') }}"data-clone="Cursos">Cursos</a></li>
+						<li><a href="{{ url('agendamentos') }}"data-clone="agendamentos">Agendamentos</a></li>
 					</ul>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
