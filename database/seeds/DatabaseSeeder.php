@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
 
         Model::reguard();
 
-        factory('SIGAL\User')->create([
+        factory('App\User')->create([
                 'name' => 'admin',
                 'email' => 'admin@admin',
                 'password' => Hash::make("admin"),

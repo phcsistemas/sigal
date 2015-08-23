@@ -31,7 +31,7 @@
                 <div class="form-group">
                     {!! Form::label('predio', 'Predio:', array('class' => 'col-md-2 control-label')) !!}
                     <div class="col-sm-4">
-                        {!! Form::text('predio', Input::old('predio'), array('class' => 'form-control', 'placeholder' => 'Nome do predio')) !!}
+                        {!! Form::text('predio', Input::old('predio'), array('class' => 'form-control', 'placeholder' => 'Nome do predio', 'autofocus')) !!}
                     </div>
                     {!! Form::label('andar', 'Andar:', array('class' => 'col-md-1 control-label')) !!}
                     <div class="col-sm-4">

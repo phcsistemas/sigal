@@ -20,6 +20,7 @@ class CreateSalasTable extends Migration
             $table->smallInteger('capacidade');
             $table->string('tipo');
             $table->boolean('alocada');
+            $table->boolean('acessibilidade');
             $table->timestamps();
         });
     }
