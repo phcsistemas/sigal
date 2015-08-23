@@ -73,24 +73,26 @@
 </style>
 
 
-<div style='position:absolute; top:450px; left:440px; color: white;font-size: 25px' >
-    Jackson Carelli
-</div>
 
-<div style='position:absolute; top:450px; left:70px; color: white;font-size: 25px' >
-    Jefferson Gouveia
-</div>
+
 
 
 <div class="flip-container" ontouchstart="this.classList.toggle('hover');" style='position:absolute; top:80px; left:50px;'>
     <div class="flipper">
-        <div class="front">
+
+        <div class="front" >
 
             <img src="/assets/img/desenv2.jpg">
+            <div style="position:absolute; top:200px; left:20px; color: black;font-size: 25px" >
+                Jefferson Gouveia
+            </div>
+
         </div>
+
         <div class="back" align="center">
             <div style='position:relative; top:0px; left:0px;'>
                 <img src=/assets/img/desenvback2.jpg border=0>
+
                 <div style='position:absolute; top:60px; left:40px;'>
                     <a href = "https://www.facebook.com/jefferson.gouveia.0?fref=ts"> <img src=/assets/img/icones/face.png style="width: 40px"></a>
                 </div>
@@ -102,7 +104,9 @@
                 </div>
 
             </div>
+
         </div>
+
         </div>
     </div>
 
@@ -112,6 +116,9 @@
         <div class="front">
 
             <img src="/assets/img/desenv1.jpg">
+            <div style="position:absolute; top:200px; left:40px; color: black;font-size: 25px" >
+                Jackson Carelli
+            </div>
         </div>
         <div class="back" align="center">
             <div style='position:relative; top:0px; left:0px;'>

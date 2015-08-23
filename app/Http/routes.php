@@ -32,6 +32,8 @@ Route::resource('professores', 'ProfessoresController');
 
 Route::resource('cursos', 'CursosController');
 
+Route::resource('agendamentos', 'AgendamentosController');
+
 Route::get('/desenvolvedores', function () {
     return view('desenvolvedores/index');
 });
