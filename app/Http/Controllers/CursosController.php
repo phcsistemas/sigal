@@ -30,7 +30,15 @@ class CursosController extends Controller
     {
         $cursos = $this->cursos->all();
 
-        return view('cursos.index', compact('cursos'));
+        if($cursos->isEmpty()) {
+            $message = 'Nao ha cursos registradas ainda!';
+            $button = 'Adicionar nova sala';
+            $create =  'cursos.create';
+
+            return view('layouts.empty', compact('message', 'button', 'create'));
+        } else {
+            return view('cursos.index', compact('cursos'));
+        }
     }
 
     /**

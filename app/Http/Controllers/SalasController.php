@@ -31,10 +31,12 @@ class SalasController extends Controller
     {
         $salas = $this->salas->all();
 
-        if(isset($salas)) {
+        if($salas->isEmpty()) {
             $message = 'Nao ha salas registradas ainda!';
+            $button = 'Adicionar nova sala';
+            $create =  'salas.create';
 
-            return view('layouts.empty', compact('message'));
+            return view('layouts.empty', compact('message', 'button', 'create'));
         } else {
             return view('salas.index', compact('salas'));
         }

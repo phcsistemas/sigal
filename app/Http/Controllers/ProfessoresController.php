@@ -31,7 +31,15 @@ class ProfessoresController extends Controller
         $professores = $this->professores->all();
         $cursos = Curso::all()->lists('nome_curso', 'id');
 
-        return view('professores.index', compact('professores', 'cursos'));
+        if($professores->isEmpty()) {
+            $message = 'Nao ha professores registradas ainda!';
+            $button = 'Adicionar novo professor';
+            $create =  'professores.create';
+
+            return view('layouts.empty', compact('message', 'button', 'create', 'cursos'));
+        } else {
+            return view('professores.index', compact('professores', 'cursos'));
+        }
     }
 
     /**

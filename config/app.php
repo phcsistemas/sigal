@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -137,24 +136,14 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        Illuminate\Html\HtmlServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-
-        /*
-         * Scaffold
-         */
-        Bestmomo\Scafold\ScafoldServiceProvider::class,
-
-        /*
-         * Laravel collective
-         */
-        Collective\Html\HtmlServiceProvider::class,
-
     ],
 
     /*
@@ -203,8 +192,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-        'Form'      => Collective\Html\FormFacade::class,
-        'Html'      => Collective\Html\HtmlFacade::class,
+        'Form'      => Illuminate\Html\FormFacade::class,
+        'Html'      => Illuminate\Html\HtmlFacade::class,
     ],
 
 ];
+
