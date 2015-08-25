@@ -60,7 +60,8 @@ class SalasController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->except('_token');
+        $input = $request->all();
+        dd($input);
         $this->salas->create($input);
 
         return redirect()->route('salas.index');
@@ -104,7 +105,7 @@ class SalasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->except('_method', '_token');
+        $input = $request->all();
         $sala = $this->salas->find($id);
         $sala->update($input);
 

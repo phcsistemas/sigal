@@ -22,38 +22,8 @@
                     </div>
                 </div>
 
-                {!! Form::model($cursoEdit, array(
-                    'class' => 'form-horizontal',
-                    'method' => 'PATCH',
-                    'route' => array('cursos.update', $cursoEdit->id))) !!}
-
-                <div class="form-group">
-                    {!! Form::label('nome', 'Nome:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('nome_curso', Input::old('nome_curso'), array('class' => 'form-control', 'placeholder' => 'Nome do curso')) !!}
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('Coordenador', 'Coord.:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('coordenador', Input::old('coordenador'), array('class' => 'form-control', 'placeholder' => 'Nome do coordenador')) !!}
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => '(xx)-xxxx-xxxx')) !!}
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <div align="center" >
-                        {!! Form::submit('Atualizar', array('class' => 'btn btn-lg btn-success')) !!}
-                    </div>
-                </div>
-
+                {!! Form::model($cursoEdit, array('class' => 'form-horizontal', 'method' => 'PATCH', 'route' => array('cursos.update', $cursoEdit->id))) !!}
+                    @include('cursos._form')
                 {!! Form::close() !!}
 
                 <script>

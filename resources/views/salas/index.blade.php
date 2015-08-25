@@ -44,7 +44,6 @@
                         <th>Numero</th>
                         <th>Capacidade</th>
                         <th>Tipo</th>
-                        <th>Alocada</th>
                         <th>Opcoes</th>
 
                         </thead>
@@ -56,11 +55,6 @@
                             <td>{{ $sala->numero }}</td>
                             <td>{{ $sala->capacidade }}</td>
                             <td>{{ $sala->tipo }}</td>
-                            @if ($sala->alocada)
-                                <td>Sim</td>
-                            @else
-                                <td>Nao</td>
-                            @endif
                             <td align="center">
                                 <button class="btn btn-editar  btn-sm" data-toggle="modal"
                                         onclick="editModal({{ $sala->id }})">

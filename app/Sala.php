@@ -8,5 +8,5 @@ class Sala extends Model
 {
     protected $table = 'salas';
 
-    protected $fillable = array('predio', 'andar', 'numero', 'capacidade', 'tipo');
+    protected $fillable = array('predio', 'andar', 'numero', 'capacidade', 'tipo', 'acessibilidade');
 }

@@ -32,7 +32,7 @@ class ProfessoresController extends Controller
         $cursos = Curso::all()->lists('nome_curso', 'id');
 
         if($professores->isEmpty()) {
-            $message = 'Nao ha professores registradas ainda!';
+            $message = 'Nao ha professores registrados ainda!';
             $button = 'Adicionar novo professor';
             $create =  'professores.create';
 
@@ -60,7 +60,7 @@ class ProfessoresController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->except('_token');
+        $input = $request->all();
         $this->professores->create($input);
 
         return redirect()->route('professores.index');
@@ -105,7 +105,7 @@ class ProfessoresController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->except('_method', '_token');
+        $input = $request->all();
         $professor = $this->professores->find($id);
         $professor->update($input);
 
