@@ -6567,18 +6567,22 @@ fieldset[disabled] .form-controltable {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .form-controltablepequeno::-moz-placeholder {
+  
   color: #999999;
   opacity: 1;
 }
 .form-controltablepequeno:-ms-input-placeholder {
+
   color: #999999;
 }
 .form-control::-webkit-input-placeholder {
+
   color: #999999;
 }
 .form-controltablepequeno[disabled],
 .form-controltablepequeno[readonly],
 fieldset[disabled] .form-controltablepequeno {
+
   cursor: not-allowed;
   background-color: #eeeeee;
   opacity: 1;
@@ -6589,5 +6593,6 @@ fieldset[disabled] .form-controltablepequeno {
 
 
 .table-zebra > tbody > tr:nth-child(even) {
+
   background-color: #f3f3f3;
 }
