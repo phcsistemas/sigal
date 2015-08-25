@@ -31,7 +31,7 @@ class CursosController extends Controller
         $cursos = $this->cursos->all();
 
         if($cursos->isEmpty()) {
-            $message = 'Nao ha cursos registradas ainda!';
+            $message = 'Nao ha cursos registrados ainda!';
             $button = 'Adicionar nova sala';
             $create =  'cursos.create';
 
@@ -48,7 +48,7 @@ class CursosController extends Controller
      */
     public function create()
     {
-        //
+        return view('professores.create');
     }
 
     /**
@@ -59,7 +59,7 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->except('_token');
+        $input = $request->all();
         $this->cursos->create($input);
 
         return redirect()->route('cursos.index');
@@ -104,7 +104,7 @@ class CursosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->except('_method', '_token');
+        $input = $request->all();
         $curso = $this->cursos->find($id);
         $curso->update($input);
 

@@ -11,47 +11,20 @@
             </div>
 
         <div class="modal-body " >
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-2">
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    {!! implode('', $errors->all('<li class="error">:message</li>')) !!}
-                                </ul>
-                            </div>
-                        @endif
-                    </div>
-                </div>
-
-                {!! Form::open(array('route' => 'cursos.store', 'class' => 'form-horizontal')) !!}
-
-                <div class="form-group" >
-                    {!! Form::label('nome', 'Nome:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('nome_curso', Input::old('nome_curso'), array('class' => 'form-control', 'placeholder' => 'Nome do curso')) !!}
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('Coordenador', 'Coord.:', array('class' => 'col-md-2 control-label')) !!}
-                    <div class="col-sm-9">
-                        {!! Form::text('coordenador', Input::old('coordenador'), array('class' => 'form-control', 'placeholder' => 'Nome do coordenador')) !!}
-                    </div>
-                </div>
-
-            <div class="form-group">
-                {!! Form::label('fone', 'Fone:', array('class' => 'col-md-2 control-label')) !!}
-                <div class="col-sm-9">
-                    {!! Form::text('fone', Input::old('fone'), array('class' => 'form-control', 'placeholder' => 'Digite apenas os numeros', 'id' => 'fone')) !!}
+            <div class="row">
+                <div class="col-md-10 col-md-offset-2">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                {!! implode('', $errors->all('<li class="error">:message</li>')) !!}
+                            </ul>
+                        </div>
+                    @endif
                 </div>
             </div>
 
-            <div class="modal-footer">
-                <div align="center">
-                    {!! Form::submit('Cadastrar', array('class' => 'btn btn-lg btn-confirm')) !!}
-                </div>
-            </div>
-
+            {!! Form::open(array('route' => 'cursos.store', 'class' => 'form-horizontal')) !!}
+                @include('cursos._form')
             {!! Form::close() !!}
 
             </div>
