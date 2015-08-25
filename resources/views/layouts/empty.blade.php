@@ -6,11 +6,11 @@
         <div class="container">
 
             <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createModal">
-                Adicionar nova sala
+                {{ $button }}
             </button>
 
 
-            @include('salas.create')
+            @include($create)
 
             <p></p>
             <legend></legend>
