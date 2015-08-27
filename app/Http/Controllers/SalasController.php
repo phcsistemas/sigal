@@ -61,7 +61,7 @@ class SalasController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        dd($input);
+
         $this->salas->create($input);
 
         return redirect()->route('salas.index');

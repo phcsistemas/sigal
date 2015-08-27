@@ -1,7 +1,6 @@
 @extends('layouts.template')
 
 @section('content')
-
     <section class="wrap">
         <div class="container">
             <button  class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createModal">
@@ -13,14 +12,27 @@
             <p></p>
             <legend></legend>
 
-            <div class="panel panel-default">
+            <div class="panel  panel-primary">
                 <div class="panel-heading">
+                    <div class="pull-right">
+                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filtro</button>
+                    </div>
                     <h3 class="panel-title"><i class="fa fa-male fa-fw"></i>Professores</h3>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover table-striped">
                             <thead>
+                            <thead>
+                            <tr class="filters">
+                                <th><input type="text" class="form-controltablepequeno" placeholder="Nome" ></th>
+                                <th><input type="text" class="form-controltablepequeno" placeholder="RA" ></th>
+                                <th><input type="text" class="form-controltablepequeno" placeholder="Curso" ></th>
+                            </tr>
+
+                            </thead>
+
+
                             <tr>
                                 <th>Nome</th>
                                 <th>RA</th>
@@ -28,7 +40,7 @@
                                 <th>CGU</th>
                                 <th>Email</th>
                                 <th>Fone</th>
-                                <th>Opcoes</th>
+                                <th>Opções</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -59,6 +71,7 @@
 
             @include('professores.delete_confirm')
 
+
             <script>
                 function editModal(id) {
                     $.ajax({
@@ -68,7 +81,7 @@
                     });
                 }
             </script>
-
         </div>
+        <script src="/js/filtro.js"></script>
     </section>
 @stop

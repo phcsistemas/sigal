@@ -14,7 +14,7 @@
             <p></p>
             <legend></legend>
 
-            <div class="panel panel-default">
+            <div class="panel  panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title"><i class="fa fa-male fa-fw"></i>Cursos</h3>
                 </div>
@@ -26,7 +26,7 @@
                                 <th>Nome</th>
                                 <th>Coordenador</th>
                                 <th>Fone</th>
-                                <th>Opcoes</th>
+                                <th>Opções</th>
                             </tr>
                             </thead>
                             <tbody>

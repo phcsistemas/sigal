@@ -1,6 +1,8 @@
 @extends('layouts.template')
 
 @section('content')
+    <script src="/js/filtro2.js"></script>
+    <script src="/js/filtro.js"></script>
 
     <section class="wrap">
         <div class="container">
@@ -12,39 +14,35 @@
 
             <p></p>
             <legend></legend>
-
         <div class="row">
             <div class="panel panel-primary filterable">
                 <div class="panel-heading">
+
                     <h3 class="panel-title">Salas</h3>
                     <div class="pull-right">
-                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filtro</button>
                     </div>
+
                 </div>
                 <table class="table table-bordered table-hover  table-zebra">
                     <thead>
-                    <tr class="filters">
-                        <th><input type="text" class="form-controltablepequeno" placeholder="Predio" ></th>
+                    <tr class="filters" ">
+                        <th><input type="text" class="form-controltablepequeno" placeholder="Prédio" ></th>
                         <th><input type="text" class="form-controltablepequeno" placeholder="Andar" ></th>
-                        <th><input type="text" class="form-controltablepequeno" placeholder="Numero" ></th>
+                        <th><input type="text" class="form-controltablepequeno" placeholder="Número" ></th>
                         <th><input type="text" class="form-controltablepequeno" placeholder="Capacidade" ></th>
-                        <th> <div class="form-group">
-                                {!! Form::label('tipo', 'Tipo:', array('class' => 'col-md-2 control-label')) !!}
-                                <div class="col-sm-4">
-                                    {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio', array('class' => 'form-controltablepequeno')) !!}
-                                </div>
-                            </div></th>
-
                     </tr>
                     </thead>
+                    <thead>
+
                     <tr>
-                        <thead>
-                        <th >Predio</th>
+
+                        <th >Prédio</th>
                         <th>Andar</th>
-                        <th>Numero</th>
+                        <th>Número</th>
                         <th>Capacidade</th>
                         <th>Tipo</th>
-                        <th>Opcoes</th>
+                        <th>Opções</th>
 
                         </thead>
                         <tbody>
@@ -82,14 +80,13 @@
             });
         }
     </script>
-    <link href="{{ asset('/js/filtro.js') }}" rel="script">
     </div>
     </section>
     <br>
     <div class="rodape">
 
         <div class="container" >
-            <p class ="navbar-text navbar-right">Sistema de Gerenciamento Audit�rios e Laborat�rios - CEULJI/ULBRA </p>
+            <p class ="navbar-text navbar-right">Sistema de Gerenciamento Auditórios e Laboratórios - CEULJI/ULBRA </p>
 
             <div  class ="navbar-text navbar-left"</div><span class="glyphicon glyphicon-copyright-mark"></span> &nbspCopyright 2015 -<a href="{{ url('/desenvolvedores') }}"> <span style="color: #a7abab" >Desenvolvedores</a></span>
 

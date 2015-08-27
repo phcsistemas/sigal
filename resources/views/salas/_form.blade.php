@@ -1,22 +1,22 @@
 {!! csrf_field() !!}
 
 <div class="form-group">
-    {!! Form::label('predio', 'Predio:', array('class' => 'col-md-2 control-label')) !!}
+    {!! Form::label('predio', 'Prédio:', array('class' => 'col-md-2 control-label')) !!}
     <div class="col-sm-4">
-        {!! Form::text('predio', Input::old('predio'), array('class' => 'form-control', 'placeholder' => 'Nome do predio', 'autofocus')) !!}
+        {!! Form::text('predio', Input::old('predio'), array('class' => 'form-control', 'placeholder' => 'Nome do prédio', 'autofocus')) !!}
     </div>
     {!! Form::label('andar', 'Andar:', array('class' => 'col-md-1 control-label')) !!}
     <div class="col-sm-4">
-        {!! Form::text('andar', Input::old('andar'), array('class' => 'form-control', 'placeholder' => 'Andar do predio')) !!}
+        {!! Form::text('andar', Input::old('andar'), array('class' => 'form-control', 'placeholder' => 'Andar do prédio')) !!}
     </div>
 </div>
 
 
 
 <div class="form-group">
-    {!! Form::label('numero', 'Numero:', array('class' => 'col-md-2 control-label')) !!}
+    {!! Form::label('numero', 'Número:', array('class' => 'col-md-2 control-label')) !!}
     <div class="col-sm-4">
-        {!! Form::text('numero', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Numero da sala')) !!}
+        {!! Form::text('numero', Input::old('numero'), array('class' => 'form-control', 'placeholder' => 'Número da sala')) !!}
     </div>
 
     {!! Form::label('capacidade', 'Cap.:', array('class' => 'col-md-1 control-label')) !!}
@@ -30,7 +30,7 @@
 <div class="form-group">
     {!! Form::label('tipo', 'Tipo:', array('class' => 'col-md-2 control-label')) !!}
     <div class="col-sm-4">
-        {!! Form::select('tipo', array('Laboratorio' => 'Laboratorio', 'Auditorio' => 'Auditorio'), 'Laboratorio', array('class' => 'form-control')) !!}
+        {!! Form::select('tipo', array('Laboratorio' => 'Laboratório', 'Auditorio' => 'Auditório'), 'Laboratorio', array('class' => 'form-control')) !!}
     </div>
 
     {!! Form::label('acessibilidade', 'Possui acessibilidade', array('class' => 'col-md-2 control-label')) !!}
@@ -40,9 +40,9 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('recurso', 'Recuso disponivel:', array('class' => 'col-md-2 control-label')) !!}
+    {!! Form::label('recurso', 'Recuso Disponível:', array('class' => 'col-md-2 control-label')) !!}
     <div class="col-sm-4">
-        {!! Form::text('recurso', Input::old('recurso'), array('class' => 'form-control', 'placeholder' => 'Recurso disponivel')) !!}
+        {!! Form::text('recurso', Input::old('recurso'), array('class' => 'form-control', 'placeholder' => 'Recurso disponível')) !!}
     </div>
 </div>
 
