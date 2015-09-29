@@ -5,8 +5,6 @@
 @endsection
 
 @section('script')
-
-    <script src="{{ asset('/bower_components/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('/bower_components/moment/min/moment.min.js') }}"></script>
     <script src="{{ asset('/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
     <script src="{{ asset('/bower_components/fullcalendar/dist/lang/pt-br.js') }}"></script>
@@ -19,16 +17,21 @@
                     center: 'title',
                     right: 'month,agendaWeek,agendaDay'
                 },
-                defaultDate: '2014-06-12',
                 defaultView: 'month',
                 editable: true,
                 hiddenDays: [0],
-                aspectRatio: 4
+                aspectRatio: 3.25,
+                dayClick: function(date, jsEvent, view) {
+
+                    //alert('Clicked on: ' + date.format());
+                    $('#createModal').modal('show');
+                }
             });
         });
     </script>
 @endsection
 
 @section('content')
+    @include('agendamentos.create')
     <div id="calendar"></div>
 @endsection

@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Agendamento;
+use App\Sala;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 
@@ -25,7 +27,12 @@ class AgendamentosController extends Controller
     public function index()
     {
         $agendamentos = $this->agendamentos->all();
-        return view('agendamentos.index', compact('agendamentos'));
+
+        //lista os prédios sem repeti-los
+        $predios = DB::table('salas')->distinct()->lists('predio', 'predio');
+        $salas = Sala::all()->lists('numero', 'numero');
+
+        return view('agendamentos.index', compact('agendamentos', 'predios', 'salas'));
     }
 
     /**
@@ -46,7 +53,7 @@ class AgendamentosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->index();
     }
 
     /**
