@@ -19,12 +19,23 @@
                 },
                 defaultView: 'month',
                 editable: true,
-                hiddenDays: [0],
+                //hiddenDays: [0], oculta o Domingo
                 aspectRatio: 3.25,
-                dayClick: function(date, jsEvent, view) {
 
-                    //alert('Clicked on: ' + date.format());
-                    $('#createModal').modal('show');
+                dayClick: function(date, jsEvent, view) {
+                    var moment = $('#calendar').fullCalendar('getDate');
+
+                    //o usuario nao precisa reservar a sala para o passado ;)
+                    if (date.format() < moment.format('YYYY-MM-DD')) {
+                        alert('Você não pode reservar neste dia!');
+                    }
+                    else {
+                        //passa para o form a data e a hora
+                        $('#myModalLabel').text('Data: ' + date.format('DD/MM/YYYY'));
+                        $('#horaId').text(date.format('HH:MM'));
+
+                        $('#createModal').modal('show');
+                    }
                 }
             });
         });
