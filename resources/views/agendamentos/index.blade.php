@@ -30,6 +30,21 @@
                 //hiddenDays: [0], //oculta o Domingo
                 aspectRatio: 3.25,
 
+                events: [
+                    /* o formato da hora de inicio e fim do Fullcalendar é a seguinte
+                       '2015-12-31T12:30:00'
+                       por isso é chamado $agenda['dia']T$agenda['hora']
+                     */
+                    @foreach($agendamentos as $agenda)
+                        {
+                            title: '{{ $agenda['tipo'] }} - {{ $profs->get($agenda['prof_id']) }}',
+                            start: '{{ $agenda['dia'] }}T{{ $agenda['hora_inicio'] }}',
+                            end: '{{ $agenda['dia'] }}T{{ $agenda['hora_fim'] }}'
+                        },
+                    @endforeach
+
+                    ],
+
                 dayClick: function(date) { //removi "allDay, jsEvent, view" da função
                     var moment = calendar.fullCalendar('getDate');
 

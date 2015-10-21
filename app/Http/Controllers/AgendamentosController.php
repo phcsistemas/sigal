@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Professor;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -9,6 +10,7 @@ use App\Http\Controllers\Controller;
 
 use App\Agendamento;
 use App\Sala;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
@@ -31,8 +33,12 @@ class AgendamentosController extends Controller
         //lista os prédios sem repeti-los
         $predios = DB::table('salas')->distinct()->lists('predio', 'predio');
         $salas = Sala::all()->lists('numero', 'numero');
+        $profs = Professor::all()->lists('nome', 'id');
+        $agendamentos = Agendamento::all()->jsonSerialize();
 
-        return view('agendamentos.index', compact('agendamentos', 'predios', 'salas'));
+        //dd($profs->get(1));
+
+        return view('agendamentos.index', compact('agendamentos', 'predios', 'salas', 'profs', 'agendamentos'));
     }
 
     /**

@@ -15,6 +15,11 @@
     <div class="col-sm-2">
         {!! Form::select('sala_id', $salas, Input::old('sala_id'), array('class' => 'form-control')) !!}
     </div>
+
+    {!! Form::label('professor', 'Professor:', array('class' => 'col-md-2 control-label')) !!}
+    <div class="col-sm-5">
+        {!! Form::select('prof_id', $profs, Input::old('prof_id'), array('class' => 'form-control')) !!}
+    </div>
 </div>
 
 
