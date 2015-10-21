@@ -1,9 +1,16 @@
 {!! csrf_field() !!}
 
 <div class="form-group" >
+    {!! Form::hidden('dia', '', array('id' => 'dia')) !!}
+
     {!! Form::label('hora_inicio', 'Hora início: ', array('class' => 'col-md-3 control-label')) !!}
     <div class="col-sm-5">
-        {!! Form::label('hora', '', array('id' => 'horaId', 'class' => 'col-md-5 control-label')) !!}
+        {!! Form::text('hora_inicio', '', array('id' => 'horaId', 'class' => 'form-control', 'maxlength' => '5')) !!}
+    </div>
+
+    {!! Form::label('hora_fim', 'Hora fim: ', array('class' => 'col-md-3 control-label')) !!}
+    <div class="col-sm-5">
+        {!! Form::text('hora_fim', '', array('class' => 'form-control', 'maxlength' => '5')) !!}
     </div>
 
     {!! Form::label('predio', 'Prédio:', array('class' => 'col-md-2 control-label')) !!}
@@ -19,6 +26,16 @@
     {!! Form::label('professor', 'Professor:', array('class' => 'col-md-2 control-label')) !!}
     <div class="col-sm-5">
         {!! Form::select('prof_id', $profs, Input::old('prof_id'), array('class' => 'form-control')) !!}
+    </div>
+
+    {!! Form::label('tipo', 'Finalidade do uso: ', array('class' => 'col-md-3 control-label')) !!}
+    <div class="col-sm-4">
+        {!! Form::text('tipo', 'Aula', array('class' => 'form-control')) !!}
+    </div>
+
+    {!! Form::label('descricao', 'Descrição (opcional): ', array('class' => 'col-md-3 control-label')) !!}
+    <div class="col-md-7">
+        {!! Form::textarea('descricao', '', array('class' => 'form-control')) !!}
     </div>
 </div>
 

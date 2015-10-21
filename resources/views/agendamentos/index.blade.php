@@ -21,20 +21,19 @@
                 defaultView: 'agendaWeek',
                 businessHours: {
                     start: '07:00',
-                    end: '23:00',
-                    dow: [1, 2, 3, 4, 5, 6]
+                    end: '23:00'
                 },
                 minTime: '07:00',
                 maxTime: '22:30',
-                editable: true,
-                //hiddenDays: [0], //oculta o Domingo
+                editable: false,
+                hiddenDays: [0], //oculta o Domingo
                 aspectRatio: 3.25,
 
+                /* o formato da hora de inicio e fim do Fullcalendar é a seguinte
+                 '2015-12-31T12:30:00'
+                 por isso é chamado $agenda['dia']T$agenda['hora']
+                 */
                 events: [
-                    /* o formato da hora de inicio e fim do Fullcalendar é a seguinte
-                       '2015-12-31T12:30:00'
-                       por isso é chamado $agenda['dia']T$agenda['hora']
-                     */
                     @foreach($agendamentos as $agenda)
                         {
                             title: '{{ $agenda['tipo'] }} - {{ $profs->get($agenda['prof_id']) }}',
@@ -42,10 +41,9 @@
                             end: '{{ $agenda['dia'] }}T{{ $agenda['hora_fim'] }}'
                         },
                     @endforeach
-
                     ],
 
-                dayClick: function(date) { //removi "allDay, jsEvent, view" da função
+                dayClick: function(date) {
                     var moment = calendar.fullCalendar('getDate');
 
                     //o usuario nao precisa reservar a sala para o passado ;)
@@ -60,9 +58,12 @@
                             calendar.fullCalendar('changeView', 'agendaDay');
                             calendar.fullCalendar('gotoDate', date);
                         } else {
+                            //passa o dia para um campo hidden para depois guardar no banco
+                            $('#dia').val(date.format('YYYY-MM-DD'));
+
                             //passa para o form a data e a hora
                             $('#myModalLabel').text('Data: ' + date.format('DD/MM/YYYY'));
-                            $('#horaId').text(date.format('HH:mm'));
+                            $('#horaId').val(date.format('HH:mm'));
 
                             $('#createModal').modal('show');
                         }

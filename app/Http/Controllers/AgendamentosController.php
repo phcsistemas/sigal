@@ -11,8 +11,10 @@ use App\Http\Controllers\Controller;
 use App\Agendamento;
 use App\Sala;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 
 
 class AgendamentosController extends Controller
@@ -32,11 +34,10 @@ class AgendamentosController extends Controller
 
         //lista os prédios sem repeti-los
         $predios = DB::table('salas')->distinct()->lists('predio', 'predio');
-        $salas = Sala::all()->lists('numero', 'numero');
+        $salas = Sala::all()->lists('numero', 'id');
         $profs = Professor::all()->lists('nome', 'id');
         $agendamentos = Agendamento::all()->jsonSerialize();
 
-        //dd($profs->get(1));
 
         return view('agendamentos.index', compact('agendamentos', 'predios', 'salas', 'profs', 'agendamentos'));
     }
@@ -59,7 +60,16 @@ class AgendamentosController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->index();
+        //não precisamos pegar predio_id pois já temos sala_id
+        $input = $request->except('predio_id');
+
+        //pega o ID do usuário logado que fez a reserva
+        $user_id = Auth::id();
+        $input['usuario_id'] = $user_id;
+
+        $this->agendamentos->create($input);
+
+        return redirect()->route('agendamentos.index');
     }
 
     /**
