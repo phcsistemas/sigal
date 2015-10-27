@@ -2,9 +2,12 @@
 
 @section('link')
     <link rel="stylesheet" type="text/css" href="{{ asset('/bower_components/fullcalendar/dist/fullcalendar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/datepicker/jquery-ui.min.css') }}">
 @endsection
 
 @section('script')
+    <script src="{{ asset('/assets/datepicker/jquery-ui.min.js') }}"></script>
+
     <script src="{{ asset('/bower_components/moment/min/moment.min.js') }}"></script>
     <script src="{{ asset('/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
     <script src="{{ asset('/bower_components/fullcalendar/dist/lang/pt-br.js') }}"></script>
@@ -12,6 +15,7 @@
     <script>
         $(document).ready(function() {
             var calendar = $('#calendar');
+
             calendar.fullCalendar({
                 header: {
                     left: 'prev,next today',
@@ -36,7 +40,13 @@
                 events: [
                     @foreach($agendamentos as $agenda)
                         {
-                            title: '{{ $agenda['tipo'] }} - {{ $profs->get($agenda['prof_id']) }}',
+                            id: '{{ $agenda['id'] }}',
+                            day: '{{ $agenda['dia'] }}',
+                            local: '{{ $agenda['sala_id'] }}',
+                            prof: '{{ $agenda['prof_id'] }}',
+                            tipo: '{{ $agenda['tipo'] }}',
+
+                            title: '{{ utf8_decode($agenda['tipo']) }} - {{ $profs->get($agenda['prof_id']) }}',
                             start: '{{ $agenda['dia'] }}T{{ $agenda['hora_inicio'] }}',
                             end: '{{ $agenda['dia'] }}T{{ $agenda['hora_fim'] }}'
                         },
@@ -63,11 +73,32 @@
 
                             //passa para o form a data e a hora
                             $('#myModalLabel').text('Data: ' + date.format('DD/MM/YYYY'));
-                            $('#horaId').val(date.format('HH:mm'));
+                            $('#hora_inicio').val(date.format('HH:mm'));
 
                             $('#createModal').modal('show');
                         }
                     }
+                },
+
+                eventClick: function(event) {
+                    /*
+                    var date = new moment(event.start);
+                    var date_end = new moment(event.end);
+
+                    $('#myModalLabel').text('Agendamento: ' + date.format('DD-MM-YYYY'));
+                    $('#hora_inicio').val(date.format('HH:mm'));
+                    $('#hora_fim').val(date_end.format('HH:mm'));
+                    $('#sala_id').val(event.local);
+                    $('#prof_id').val(event.prof);
+                    $('#tipo').val(event.tipo);
+
+                    $('#editModal').modal('show');
+                    */
+                    $.ajax({
+                        method: 'get',
+                        url: '/agendamentos/' + event.id + '/edit'}).then(function(data) {
+                        $(data).modal()
+                    });
                 }
             });
         });
@@ -76,5 +107,6 @@
 
 @section('content')
     @include('agendamentos.create')
+
     <div id="calendar"></div>
 @endsection

@@ -30,14 +30,17 @@ class AgendamentosController extends Controller
 
     public function index()
     {
-        $agendamentos = $this->agendamentos->all();
-
         //lista os prédios sem repeti-los
         $predios = DB::table('salas')->distinct()->lists('predio', 'predio');
         $salas = Sala::all()->lists('numero', 'id');
         $profs = Professor::all()->lists('nome', 'id');
         $agendamentos = Agendamento::all()->jsonSerialize();
 
+        $i = 0;
+        foreach ($agendamentos as $agenda) {
+            $agendamentos[$i]['tipo'] = utf8_encode($agenda['tipo']);
+            $i++;
+        }
 
         return view('agendamentos.index', compact('agendamentos', 'predios', 'salas', 'profs', 'agendamentos'));
     }
@@ -91,7 +94,18 @@ class AgendamentosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $agendaEdit = $this->agendamentos->find($id);
+
+        $predios = DB::table('salas')->distinct()->lists('predio', 'predio');
+        $salas = Sala::all()->lists('numero', 'id');
+        $profs = Professor::all()->lists('nome', 'id');
+
+        if (is_null($agendaEdit))
+        {
+            return redirect()->route('agendamentos.index');
+        }
+
+        return view('agendamentos.edit', compact('agendaEdit', 'predios', 'salas', 'profs'));
     }
 
     /**
@@ -103,7 +117,12 @@ class AgendamentosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->all();
+        $agenda = $this->agendamentos->find($id);
+
+        //$agenda->update($input);
+
+        return redirect()->route('agendamentos.index');
     }
 
     /**
