@@ -23,8 +23,10 @@
                 </div>
 
                 {!! Form::model($agendaEdit, array('class' => 'form-horizontal', 'method' => 'PATCH', 'route' => array('agendamentos.update', $agendaEdit->id))) !!}
-                @include('agendamentos._form_edit')
+                    @include('agendamentos._form_edit')
                 {!! Form::close() !!}
+
+                @include('agendamentos.delete_confirm')
 
                 <script>
                     $('#datepicker').datepicker({

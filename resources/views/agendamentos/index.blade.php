@@ -81,19 +81,6 @@
                 },
 
                 eventClick: function(event) {
-                    /*
-                    var date = new moment(event.start);
-                    var date_end = new moment(event.end);
-
-                    $('#myModalLabel').text('Agendamento: ' + date.format('DD-MM-YYYY'));
-                    $('#hora_inicio').val(date.format('HH:mm'));
-                    $('#hora_fim').val(date_end.format('HH:mm'));
-                    $('#sala_id').val(event.local);
-                    $('#prof_id').val(event.prof);
-                    $('#tipo').val(event.tipo);
-
-                    $('#editModal').modal('show');
-                    */
                     $.ajax({
                         method: 'get',
                         url: '/agendamentos/' + event.id + '/edit'}).then(function(data) {
