@@ -44,16 +44,32 @@ class AgendamentosController extends Controller
                 $horas = array_add($horas, "$i:30", "$i:30");
             }
         }
+
         //remove o ultimo valor do array, que nesse caso é a hora 22:30
         array_pop($horas);
 
         return $horas;
     }
 
+    /**
+     * Formata um string de dia para o formato especificado passado.
+     *
+     * @param String $dia O dia que se quer obter com outra máscara, deve ter o separador - (hifen)
+     * @param String $mask
+     * @return bool|string
+     */
+    private function formatDate($dia, $mask)
+    {
+        $date = date_create($dia);
+
+        return date_format($date, $mask);
+    }
+
     public function index()
     {
         //lista os prédios sem repeti-los
         $predios = DB::table('salas')->distinct()->lists('predio', 'predio');
+
         $salas = Sala::all()->lists('numero', 'id');
         $profs = Professor::all()->lists('nome', 'id');
         $agendamentos = Agendamento::all()->jsonSerialize();
@@ -130,10 +146,7 @@ class AgendamentosController extends Controller
         $salas = Sala::all()->lists('numero', 'id');
         $profs = Professor::all()->lists('nome', 'id');
 
-        //cria uma nova data com o dia resgatado do banco que esta no formato YYYY-MM-DD
-        $dia = date_create($agendaEdit->dia);
-        //formata a nova data para dd/mm/yyyy
-        $agendaEdit->dia = date_format($dia, 'd/m/Y');
+        $agendaEdit->dia = $this->formatDate($agendaEdit->dia, 'd/m/Y');
 
         //retorna apenas os 5 primeiros caracteres
         //original 14:30:00 => retorna 14:30
@@ -157,7 +170,15 @@ class AgendamentosController extends Controller
         $input = $request->all();
         $agenda = $this->agendamentos->find($id);
 
-        //$agenda->update($input);
+        //cria uma nova key com o nome dia para adicionar no banco
+        $input['dia'] = $input['datepicker'];
+        //elimina a key datepicker
+        unset($input['datepicker']);
+
+        $dia = str_replace('/', '-', $input['dia']);
+        $input['dia'] = $this->formatDate($dia, 'Y-m-d');
+
+        $agenda->update($input);
 
         return redirect()->route('agendamentos.index');
     }

@@ -30,7 +30,10 @@
 
                 <script>
                     $('#datepicker').datepicker({
-                        dateFormat: 'dd/mm/yy'
+                        dateFormat: 'dd/mm/yy',
+                        onSelect: function() {
+                            $('#datepicker').val(this.value);
+                        }
                     });
 
                     function fechar(){

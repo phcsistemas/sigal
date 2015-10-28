@@ -1,7 +1,7 @@
 {{ csrf_field() }}
 
 <div class="form-group">
-    {!! Form::label('datepicker', 'Selecione o dia: ', array('class' => 'col-md-3 control-label')) !!}
+    {!! Form::label('dia', 'Selecione o dia: ', array('class' => 'col-md-3 control-label')) !!}
     <div class="col-md-3">
         {!! Form::text('datepicker', $agendaEdit->dia, array('id' => 'datepicker', 'name' => 'datepicker', 'class' => 'form-control')) !!}
     </div>
